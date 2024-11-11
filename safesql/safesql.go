@@ -1,6 +1,6 @@
 package safesql
 
-import "safesql/internal/raw"
+import "github.com/darksidergod/def-prog-exercises/safesql/internal/raw"
 
 type compileTimeConstant string
 

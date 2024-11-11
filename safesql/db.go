@@ -25,3 +25,8 @@ func (db *DB) ExecContext(ctx context.Context, query TrustedSQL, args ...any) (*
 	r, err := db.db.ExecContext(ctx, query.s, args...)
 	return &r, err
 }
+
+func Open(driverName, dataSourceName string) (*DB, error) {
+	d, err := sql.Open(driverName, dataSourceName)
+	return &DB{d}, err
+}
